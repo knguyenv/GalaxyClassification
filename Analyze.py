@@ -36,7 +36,7 @@ def BuildDataModel(samples, labels, mode):
         clf = AdaBoostClassifier(SVC(probability=True, kernel='linear'), n_estimators = 5)
     else:
         #clf = RandomForestClassifier(n_estimators=200)
-        clf = ExtraTreesClassifier(n_estimators=4000, max_depth=None, min_samples_split=1, random_state=0, max_features = 400)
+        clf = ExtraTreesClassifier(n_estimators=500, max_depth=None, min_samples_split=1, random_state=0, max_features = 200)
     score = 0
 
     kf = KFold(len(samples), n_folds=10)
